@@ -146,7 +146,7 @@ resource "null_resource" "executor" {
       "echo DIR: ${var.loadtest_dir_destination}",
       "cd ${var.loadtest_dir_destination}",
       "echo '${local.entrypoint}'",
-      "${local.entrypoint}",
+      local.entrypoint,
       "sleep 1"
 
     ]
